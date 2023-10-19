@@ -1,0 +1,12 @@
+@use './var.scss';
+@use './space.scss' as s;
+
+@mixin linkAction{
+    color: var.color('primary');
+    font-size: var.size('linkText');
+
+    &::after{
+        content: '>';
+        margin-left: s.space(2);
+    }
+}

@@ -1,0 +1,35 @@
+$colorMap: (
+    background: rgb(248, 241, 241),
+    page: #F5F5F6,
+    title: #000000,
+    primary: rgba(37, 37, 90, 0.671),
+);
+
+
+@function color ($key){
+    @return map-get($colorMap, $key);
+}
+
+$sizeMap: (
+    small: 14px,
+    default: 16px,
+    title: 32px,
+    bigTitle: 44px,
+);
+@function size ($key: 'default'){
+    @return map-get($sizeMap, $key);
+}
+
+$screenMap: (
+    desktop: 1440px,
+    laptop: 1260px,
+    tablet: 1000px,
+    mobile: 620px,
+);
+@function screen ($key: 'default'){
+    @return map-get($screenMap,$key);
+}
+
+@function content ($key: 'default'){
+    @return map-get($contentSizeMap, $key);
+}

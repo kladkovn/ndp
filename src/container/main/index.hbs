@@ -1,0 +1,76 @@
+<div class="page">
+    <div class="page__content">
+        {{!-- <header class="header__block"> --}}
+        <div class="header__block block">
+            <div class="logo">
+                <img src="/svg/logo.svg" alt="logo">
+            </div>
+            
+            <div class="box menu__box">
+                {{#each header}}
+                <a class="menu__link link" href="{{url}}">{{text}}</a>
+                {{/each}}
+            </div>
+            
+            <div class="box profile__box">
+                <img src="/svg/loop.svg" alt="loop">
+                <button class="btn btn-primary">Create Application</button>
+                <select class="form-select">
+                <option selected>EN</option>
+                <option value="1">UKR</option>
+                <option value="2">ES</option>
+                <option value="3">DU</option>
+                </select>
+                <img src="/svg/profile.svg" alt="profile">
+            </div>
+        </div>
+
+        {{!-- </header> --}}
+        <div class="hero__block block">
+            {{#with hero}}
+            <div class="hero__title">
+                <p>{{text}}</p>
+                <h1>{{title}}</h1>
+            </div>
+            <div class="hero__card">
+                {{#each card}}
+                <div class="card">
+                    <div class="card__body">
+                        <div class="card__icon">
+                            <img src="{{icon}}" alt="img">
+                        </div>
+                        <div class="card__link">
+                            <a class="link card__link" href="#">{{text}}</a>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+            {{/with}}
+        </div>
+        <footer class="footer__block block">
+            <div class="footer__section">
+                <div class="logo">
+                    <img src="/svg/logo.svg" alt="logo">
+                </div>
+                <div class="btn__box">
+                    <button class="btn btn-primary">Create Application</button>
+                    <button class="btn btn-outline-secondary">Log in / Sign up</button>
+                </div>
+            </div>
+            {{#each footer}}
+            <div class="footer__link">
+            <p class="title__footer">{{title}}</p>
+                {{#each links}}
+                <a class="link__footer link" href="{{link}}">{{text}}</a>
+                {{/each}}
+            </div>
+            {{/each}}
+            
+        </footer>
+        <div class="footer__box box">
+                <small>Terms of use</small>
+                <small>ndp.ua 2023 © all rights reserved</small>
+            </div>
+    </div>
+</div>
